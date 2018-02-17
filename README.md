@@ -27,6 +27,8 @@ This is a script, written using Anjianjingling 9, for automated Yuhun farming in
 
 玩家可以通过修改stx,sty变量来修改阴阳师窗口左上角的位置。
 
+该脚本也适用于觉醒材料，和御灵。
+
 玩家可以在任何时刻使用键盘快捷键结束脚本(默认 F12)。
 
 感谢您使用该脚本，并欢迎各种反馈和改进意见。 
