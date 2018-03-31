@@ -56,7 +56,8 @@ while (coldebug = 0){
   sleep, 200
 }
 
-InputBox, emyc, % "Select which enemy should be clicked", % "Enter a number: `r0 - Do not click enemy. `r1 - Click enemy in the middle. `r2 - Click enemy in the right."
+InputBox, emyc, % "Select which enemy should be clicked"
+  , % "Enter a number: `r0 - Do not click enemy. `r1 - aClick enemy in the middle. `r2 - Click enemy in the right."
 
 thestart:
 ;; Now, let's start solo farming YUHUN
