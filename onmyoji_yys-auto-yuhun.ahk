@@ -62,14 +62,15 @@ InputBox, emyc, % "Select which enemy should be clicked"
 thestart:
 ;; Now, let's start solo farming YUHUN
 
-WTFC1(807, 442, "f3b25e", 807, 881, 442, 459, 0, hwnd, 1)
+WTFC1(807, 442, "f3b25e", 807, 881, 442, 459, 0, 1)
 OutputDebug, % "already clicked TIAO-ZHAN"
 
-WTFC1(1031, 613, "764f2d", 988, 1067, 481, 528, 0, hwnd, 1)
+WTFC1(1031, 613, "764f2d", 988, 1067, 481, 528, 0, 1)
 OutputDebug, % "already clicked ZHUN-BEI"
 
 inbattle := 0
 while (inbattle = 0){
+  REJXS()
   colib := ts.GetColor(71, 577)
   if (colib = "f7f2df") {
     inbattle := 1
@@ -79,27 +80,32 @@ while (inbattle = 0){
 OutputDebug, % "now we are in the battle"
 
 while (inbattle = 1){
+  REJXS()
+
   ; 点击中间怪物
   if (emyc = 1) {
-    CRND(509, 579, 153, 181, hwnd)
+    CRND(509, 579, 153, 181)
   }
 
   ; 点击右边怪物
   if (emyc = 2) {
-  CRND(773, 856, 159, 190, hwnd)
+    CRND(773, 856, 159, 190)
   }
 
+  mysleep(500, 500)
+
+  REJXS()
   colib := ts.GetColor(71, 577)
   if (colib <> "f7f2df") {
     inbattle := 0
   }
-  mysleep(500, 500)
 }
 OutputDebug, % "battle finished"
 
 jiesuan := 0
 while (jiesuan = 0){
-  CRND(980, 1088, 225, 405, hwnd)
+  REJXS()
+  CRND(980, 1030, 225, 275)
 
   coljs := ts.GetColor(807, 442)
   if (coljs = "f3b25e") {

@@ -1,6 +1,6 @@
 ﻿;; CRND(x1, x2, y1, y2, hwnd)
 ;; Randomly left click once in a square area with top left (x1, y1), bottom right (x2, y2)
-CRND(x1, x2, y1, y2, hwnd){
+CRND(x1, x2, y1, y2){
   global ts
   random, xrr, x1, x2
   random, yrr, y1, y2
@@ -12,22 +12,25 @@ CRND(x1, x2, y1, y2, hwnd){
 
 ;; WTFC1(colx, coly, coll, x1, x2, y1, y2, zzz, hwnd, adv)
 ;; explanation will be given soon
-WTFC1(colx, coly, coll, x1, x2, y1, y2, zzz, hwnd, adv){
+WTFC1(colx, coly, coll, x1, x2, y1, y2, zzz, adv){
   global ts
   j := 0
   flgj :=0
   while (j = 0){
+    REJXS()
     coltest := ts.GetColor(colx, coly)
     ;OutputDebug, % coltest
     if ((coltest = coll and zzz = 0) or (coltest <> coll and zzz = 1)) {
       flgj := 1
     }
     if (flgj = 1) {
-      CRND(x1, x2, y1, y2, hwnd)
+      REJXS()
+      CRND(x1, x2, y1, y2)
       mysleep(1000, 333)
       if (adv = 0) {
         j := 1
       }
+      REJXS()
       coltest2 := ts.GetColor(colx, coly)
       if ((coltest2 = coll and zzz = 1) or (coltest2 <> coll and zzz = 0)) {
         j := 1
@@ -36,11 +39,14 @@ WTFC1(colx, coly, coll, x1, x2, y1, y2, zzz, hwnd, adv){
   }
 }
 
-REJXS(hwnd){
-  colxs := ts.GetColor(755, 465)
-  if (colxs = "dc715f"){
-    CRND(755-5, 755+5, 465-5, 465+5, hwnd)
-    OutputDebug, % "successfully rejected 1 XUAN-SHANG"
+REJXS(){
+  global ts
+  colxs := ts.GetColor(750, 458)
+  ;OutputDebug, % colxs
+  if (colxs = "df715e"){
+    CRND(750-5, 750+5, 458-5, 458+5)
+    OutputDebug, % "successfully rejected XUAN-SHANG"
+    sleep, 1000
   }
   sleep, 50
 }
