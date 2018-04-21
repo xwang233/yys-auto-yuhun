@@ -23,8 +23,8 @@
 F10::
 
 ;; TS Plugin is writen using C++, developed using VC2008, 
-;;   and open sourced at http://bbs.tyuyan.net/thread-45659-1-1.html
-;; The author acknowledges the development of TC Plugin
+;;   and is open-sourced at http://bbs.tyuyan.net/thread-45659-1-1.html
+;; The author acknowledges the development of TS Plugin
 
 
 ;; Register the TS Plugin version 4.019
