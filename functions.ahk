@@ -76,6 +76,11 @@ mysleep(slpa, slpb){
   sleep, slpa + slpbr
 }
 
+
+;; The following code is referred from
+;; https://autohotkey.com/docs/commands/ComObjActive.htm , 
+;; with GPLv2.
+
 ; ComVar: Creates an object which can be used to pass a value ByRef.
 ;   ComVar[] retrieves the value.
 ;   ComVar[] := Val sets the value.
