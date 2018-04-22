@@ -8,7 +8,7 @@ Now the script supports fully background running.
 
 ## 准备工作
 
-玩家需自行下载网易阴阳师电脑版，并登陆至游戏内，不要调整窗口大小。
+玩家需自行下载网易阴阳师电脑版，并登录至游戏内，不要调整窗口大小。
 
 该脚本为本人修仙时间使用 Autohotkey 1.1.28 版本编写，玩家可以自行下载 [Autohotkey](https://autohotkey.com/)，以及所有源文件，然后运行 onmyoji_yys-auto-yuhun.ahk。
 
@@ -62,6 +62,7 @@ Autohotkey，为 GPL 开源程序。 https://autohotkey.com/
 
 该脚本为了实现后台点击及找色功能，使用了开源的 [天使插件](http://bbs.tyuyan.net/thread-45659-1-1.html)，
 该插件由 C++ 编写，用户可以前往他们的站点下载源代码，作者只是调用了预编译好的 dll 库。
+并请参考天使插件的 License.
 
 <!-- 根据 [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) 开源协议，本人不对该脚本负任何责任。-->
 
