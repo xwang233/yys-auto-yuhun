@@ -12,7 +12,7 @@ Now the script supports fully background running.
 
 该脚本为本人修仙时间使用 Autohotkey 1.1.28 版本编写，玩家可以自行下载 [Autohotkey](https://autohotkey.com/)，以及所有源文件，然后运行 onmyoji_yys-auto-yuhun.ahk。
 
-玩家也可以下载预先编译好的可执行版本 [Releases](https://github.com/society765/yys-auto-yuhun/releases)，同时需要下载 [TSPlug.dll](TSPlug.dll) 并与可执行文件放在同一路径下。
+玩家也可以下载预先编译好的可执行版本 [Releases](https://github.com/society765/yys-auto-yuhun/releases) 。
 
 ## 使用方法及功能简介
 
