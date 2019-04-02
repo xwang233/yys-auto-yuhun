@@ -44,6 +44,9 @@ Now the script supports fully background running.
 
 * 玩家也可以使用旧版的按键精灵脚本，该按键精灵脚本不会再继续更新。按键精灵使用了后台点击，和前台找色函数，窗口不能被遮挡，不能被移动，但是不需要调整系统的画面设置。
 
+* Issue [#3](https://github.com/society765/yys-auto-yuhun/issues/3) 中提及脚本在 2019/3/28 更新后失效，
+作者大概需要一段时间来 debug. 
+
 ## 更新记录
 
 2018年1月13日，上传了初始版本。
@@ -63,6 +66,9 @@ Autohotkey，为 GPL 开源程序。 https://autohotkey.com/
 该脚本为了实现后台点击及找色功能，使用了开源的 [天使插件](http://bbs.tyuyan.net/thread-45659-1-1.html)，
 该插件由 C++ 编写，用户可以前往他们的站点下载源代码，作者只是调用了预编译好的 dll 库。
 并请参考天使插件的 License.
+
+(如果上面`天使插件`地址不能访问，请尝试 [天使插件](http://52tc.info/thread-45659-1-1.html)，
+好像他们论坛换地址了。)
 
 <!-- 根据 [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) 开源协议，本人不对该脚本负任何责任。-->
 
