@@ -19,6 +19,7 @@
 
 ;; CRND(x1, x2, y1, y2, hwnd)
 ;; Randomly left click once in a square area with top left (x1, y1), bottom right (x2, y2)
+;; 随机点击一块矩形区域内的点 (x1, x2) (y1, y2)
 CRND(x1, x2, y1, y2){
   global ts
   random, xrr, x1, x2
@@ -30,7 +31,17 @@ CRND(x1, x2, y1, y2){
 }
 
 ;; WTFC1(colx, coly, coll, x1, x2, y1, y2, zzz, hwnd, adv)
-;; explanation will be given soon
+;; Usage: 
+;; 等待并且持续判断点 (colx, coly) 的颜色，直到该点颜色
+;; 等于 coll (if zzz == 0) 或者 不等于 coll (if zzz == 1) 
+;; 然后开始随机点击范围 (x1, x2) (y1, y2) 内的点，直到点 (colx, coly) 的颜色
+;;   if adv == 1: 
+;;    不等于 coll (if zzz == 0) 或者 等于 coll (if zzz == 1)  
+;;   if adv == 0: 
+;;    不判断，点击一次后退出循环
+;; Example: 
+;; 在准备界面时，通过判断鼓锤上某点的颜色（因为UI不会随着游戏人物摆动），来持续点击鼓面，
+;; 直到鼓锤上该点的颜色改变，说明进入了战斗。
 WTFC1(colx, coly, coll, x1, x2, y1, y2, zzz, adv){
   global ts
   j := 0
@@ -58,6 +69,7 @@ WTFC1(colx, coly, coll, x1, x2, y1, y2, zzz, adv){
   }
 }
 
+;; 判断悬赏 X 位置的颜色，如果是对应的红色，则点击一次拒绝。
 REJXS(){
   global ts
   colxs := ts.GetColor(750, 458)
