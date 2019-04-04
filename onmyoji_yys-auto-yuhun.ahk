@@ -84,8 +84,8 @@ thestart:
 WTFC1(807, 442, "f3b25e", 807, 881, 442, 459, 0, 1)
 OutputDebug, % "already clicked TIAO-ZHAN"
 
-WTFC1(1031, 613, "764f2d", 988, 1067, 481, 528, 0, 1)
-OutputDebug, % "already clicked ZHUN-BEI"
+;WTFC1(1031, 613, "764f2d", 988, 1067, 481, 528, 0, 1)
+;OutputDebug, % "already clicked ZHUN-BEI"
 
 inbattle := 0
 while (inbattle = 0){
