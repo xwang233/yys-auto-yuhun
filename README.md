@@ -12,6 +12,8 @@ Now the script supports fully background running.
 
 该脚本为本人修仙时间使用 Autohotkey 1.1.28 版本编写，玩家可以自行下载 [Autohotkey](https://autohotkey.com/)，以及所有源文件，然后运行 onmyoji_yys-auto-yuhun.ahk。
 
+__游戏窗口和AHK脚本都需要右键使用管理员权限运行！__
+
 玩家也可以下载预先编译好的可执行版本 [Releases](https://github.com/society765/yys-auto-yuhun/releases) 。
 
 ## 使用方法及功能简介
@@ -23,7 +25,8 @@ Now the script supports fully background running.
 
 该脚本为单人探索，每次消耗6体力。在脚本开始时会弹出对话框，输入对应的数字以选择自动点击中间或右边怪物。
 
-玩家需要开启自动战斗模式，并提前准备好战斗阵容。御魂十层界面中的阵容不需要锁定。
+玩家需要开启自动战斗模式，并提前准备好战斗阵容。御魂十层界面中的阵容 __需要__ 锁定。 
+(2019.4.4更新后，该脚本不会再自动点击战斗中的“准备”)
 
 在御魂战斗过程中，该脚本会自动拒绝所有悬赏封印的邀请。
 
@@ -42,10 +45,15 @@ Now the script supports fully background running.
 
 * 当玩家使用 Windows 7 系统时，需要以管理员身份运行阴阳师游戏窗口和脚本。而且，需要调整系统的画面设置： 右键我的电脑 -> 高级系统设置 -> 高级 -> 设置 -> 取消勾选以下3项： "启用 Aero peek"，"启用透明玻璃"，和"启用桌面组合"。
 
+* 在 Windows 10 系统中，不需要调整系统画面设置。
+
 * 玩家也可以使用旧版的按键精灵脚本，该按键精灵脚本不会再继续更新。按键精灵使用了后台点击，和前台找色函数，窗口不能被遮挡，不能被移动，但是不需要调整系统的画面设置。
 
-* Issue [#3](https://github.com/society765/yys-auto-yuhun/issues/3) 中提及脚本在 2019/3/28 更新后失效，
-作者大概需要一段时间来 debug. 
+* 作者把 AutoHotKey 代码用 Python 重写了一遍，目前 Python 代码可以正常运行，但是
+  * 需要提前手动注册插件： `regsvr32.exe TSPlug.dll` 
+  * 需要用管理员权限运行 Python 脚本 (以及游戏窗口) 
+  * Python 脚本目前还不支持键盘快捷键 capture，只能手动运行脚本，以及通过任务管理器来终止 Python 进程。
+  欢迎 PR 来添加键盘快捷键支持。最好是可以在程序中断时，自动释放窗口绑定。(参考 Python 脚本最后一行)
 
 ## 更新记录
 
@@ -54,6 +62,8 @@ Now the script supports fully background running.
 2018年2月11日，强化了拒绝悬赏的函数。
 
 2018年3月31日，完全使用 Autohotkey 重写了脚本，现在支持完全后台。
+
+2019年4月4日，由于 Issue [#3](https://github.com/society765/yys-auto-yuhun/issues/3) 提及了 2019/3/28 更新后，战斗界面中的“准备”鼓面位置上移，导致脚本不能正确点击“准备”。为了避免以后类似情况的发生，作者注释掉了手动点击“准备”的函数，现在需要在御魂层数选择界面中，提前勾选“阵容锁定”。 
 
 ## 免责声明
 
