@@ -11,9 +11,10 @@ col_zidong = 'f7f2df'
 pos_zidong = (71, 577)
 pos_button_continue_invite = (724, 396)
 col_fighter_auto_accept = 'edc791'
-#pos_fighter_auto_accept = (209, 224)
 pos_jiesuan = (1062, 1118, 132, 179)
 col_normal_accept = '54b05f'
+pos_middle_monster = (509, 579, 153, 181)
+pos_right_monster = (773, 856, 159, 190)
 
 battle_failed_status = 0 
 
@@ -219,11 +220,11 @@ def dual_yuhun(ts_d, ts_f):
 
             # 点击中间怪物
             if emyc == 1:
-                crnd(ts_d, 509, 579, 153, 181)
+                crnd(ts_d, *pos_middle_monster)
 
             # 点击右边怪物
             elif emyc == 2:
-                crnd(ts_d, 773, 856, 159, 190)
+                crnd(ts_d, *pos_right_monster)
 
             mysleep(500, 500)
 
