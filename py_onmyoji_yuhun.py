@@ -156,6 +156,8 @@ if __name__ == "__main__":
     # 建立 COM Object
     ts = win32com.client.Dispatch("ts.tssoft") 
 
-    yuhun(ts)
-
-    print('UnBindWindow return:', ts.UnBindWindow())
+    try:
+        yuhun(ts)
+    except: 
+        print('terminated')
+        print('UnBindWindow return:', ts.UnBindWindow())
