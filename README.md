@@ -17,6 +17,7 @@ __游戏窗口和AHK脚本都需要右键使用管理员权限运行！__
 玩家也可以下载预先编译好的 AutoHotKey 可执行版本 [Releases](https://github.com/society765/yys-auto-yuhun/releases) 。
 
 玩家还可以使用 Python 脚本 [py_onmyoji_yuhun.py](./py_onmyoji_yuhun.py)，Python 脚本需要以 __管理员__ 权限运行，脚本运行后自动开始，并需要在命令行用 Ctrl+C 中止。 
+感谢 [#4](https://github.com/society765/yys-auto-yuhun/issues/4) 的反馈，Python 需要使用32位的版本，64位的可能会报错。
 
 如果需要使用本地双开脚本，参考 [dual.py](./dual-SHUANG-KAI)。
 
