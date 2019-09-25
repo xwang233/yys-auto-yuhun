@@ -6,6 +6,8 @@
 This is a script, written using Autohotkey and Python, for automated Yuhun farming in Netease game Onmyoji, PC emulator version.
 Now the script supports fully background running. 
 
+__作者已经弃坑很久了，建议使用 AcademicDog 开发的版本 [https://github.com/AcademicDog/onmyoji_bot](https://github.com/AcademicDog/onmyoji_bot)__
+
 ## 准备工作
 
 玩家需自行下载网易阴阳师电脑版，并登录至游戏内，不要调整窗口大小。
