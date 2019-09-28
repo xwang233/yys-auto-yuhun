@@ -5,8 +5,10 @@ import random
 import threading
 
 col_button_yellow = 'f3b25e'
-col_fighter_start_battle_blank = 'c7bdb4'
-pos_button_start_battle = (987, 528)
+col_fighter_start_battle_blank = 'd33923'
+col_button_start_battle = '302318'
+pos_button_start_battle = (1072, 577)
+pos_button_start_battle_area = (1062, 1102, 553, 592)
 col_zidong = 'f7f2df'
 pos_zidong = (71, 577)
 pos_button_continue_invite = (724, 396)
@@ -105,12 +107,12 @@ def bind_two_windows(ts_d, ts_f):
         return 2
     mysleep(500)
 
-    if ts_f.GetColor(*pos_button_start_battle) == col_button_yellow: 
+    if ts_f.GetColor(*pos_button_start_battle) == col_button_start_battle: 
         #ts_d, ts_f = ts_f, ts_d
         print("handle swapped, don't worry")
         ts_ret = ts_d.BindWindow(hwnd[1], 'dx2', 'windows', 'windows', 0) 
         ts_ret = ts_f.BindWindow(hwnd[0], 'dx2', 'windows', 'windows', 0) 
-    elif ts_d.GetColor(*pos_button_start_battle) == col_button_yellow: 
+    elif ts_d.GetColor(*pos_button_start_battle) == col_button_start_battle: 
         pass 
     else: 
         print("didn't find KAI-SHI-ZHAN-DOU, can't distinguish which one is driver ")
@@ -186,7 +188,7 @@ def driver_jiesuan(ts):
             #break 
         
         coljs = ts.GetColor(*pos_button_start_battle)
-        if coljs == col_button_yellow: 
+        if coljs == col_button_start_battle: 
             print('driver is in XIE ZHAN DUI WU')
             stats = 2 
             break 
@@ -200,8 +202,8 @@ def dual_yuhun(ts_d, ts_f):
     while True: 
         # 司机点击开始战斗
         # 需要锁定阵容！
-        wtfc1(ts_d, *pos_button_start_battle, col_button_yellow, 
-            868, 986, 523, 545, 0, 1)
+        wtfc1(ts_d, *pos_button_start_battle, col_button_start_battle, 
+            *pos_button_start_battle_area, 0, 1)
         print('clicked KAI-SHI-ZHAN-DOU!')
 
         #判断是否已经进入战斗 
