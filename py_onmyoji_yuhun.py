@@ -99,7 +99,7 @@ def yuhun(ts):
     # 御魂战斗主循环
     while True:
         # 在御魂主选单，点击“挑战”按钮, 需要使用“阵容锁定”！
-        wtfc1(ts, 807, 442, "f3b25e", 807, 881, 442, 459, 0, 1)
+        wtfc1(ts, 1027, 535, "e5d9c2", 1022, 1032, 530, 540, 0, 1)
         print('already clicked TIAO-ZHAN')
 
         #wtfc1(ts, 1033, 576, "e6c78f", 1004, 1073, 465, 521, 0, 1)
@@ -139,8 +139,8 @@ def yuhun(ts):
           rejxs(ts)
           crnd(ts, 980, 1030, 225, 275)
 
-          coljs = ts.GetColor(807, 442)
-          if coljs == "f3b25e":
+          coljs = ts.GetColor(1027, 535)
+          if coljs == "e5d9c2":
               break
           mysleep(500, 500)
         print("back to YUHUN level selection")
